@@ -1,0 +1,83 @@
+<!-- Link tor portfolio: file:///Users/muhammadawais/Desktop/Bootstrap-Portfolio/portfolio.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Train Scheduler</title>
+    <!-- Link to firebase, bootstrap, moment, and jquery -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/reset.css"/>
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://www.gstatic.com/firebasejs/5.3.1/firebase.js"></script>
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+</head>
+<!-- use jumbotron for the header and seperated the  display to two containers-->
+<body style="background-image: url(assets/images/back2.jpg)">
+    <div class = 'container'>
+        <div class="jumbotron" id = "head2">
+            <h1 class="text-center">Train Schedule</h1>
+        </div>
+        <!-- used card for the layout -->
+            <div class = "card">
+                <h5 class = "card-header">Current Train Schedule</h5>
+                <div class = "card-body">
+                    <table class="table table-striped table-dark" id ="train-table">
+                        <!-- table display with heading but no content because that will be added in JS -->
+                            <thead>
+                                <tr>
+                                <th scope="col">Train Name</th>
+                                <th scope="col">Destination</th>
+                                <th scope="col">Frequency(mins)</th>
+                                <th scope="col">Next Arrival</th>
+                                <th scope="col">Minutes Away</th>
+                                </tr>
+                            </thead>
+                            <!-- JS input here -->
+                            <tbody>
+                            </tbody>
+                            </table>
+                </div>
+            </div>
+        </div>
+        <br>
+        <br>
+        <!-- use to add a new train to the schedule -->
+        <div class = "container">
+            <div class = "card">
+            <h5 class = "card-header">Add Train</h5>
+            <div class = "card-body">
+                <form>
+                    <!-- name -->
+                    <div class="form-group">
+                        <label for="inputName">Train Name</label>
+                        <input type="text" class="form-control" id="inputName">
+                    </div>
+                    <!-- place going to -->
+                    <div class="form-group">
+                        <label for="inputPlace">Destination</label>
+                        <input type="text" class="form-control" id="inputPlace">
+                    </div>
+                    <!-- the time the first time will arrive -->
+                    <div class="form-group">
+                        <label for="inputTime">First Train Time(HH:mm - military time)</label>
+                        <input type="text" class="form-control" id="inputTime">
+                    </div>
+                    <div class="form-group">
+                        <!-- how long until the next train comes -->
+                        <label for="inputFreq">Frequency (min)</label>
+                        <input type="text" class="form-control" id="inputFreq">
+                        </div>
+                        <button class="btn btn-primary float-left" id="add-train-btn">Submit</button>
+                </form>
+            </div>
+            </div>
+        </div>
+        <br>
+    <script src="assets/javascript/app.js"></script>
+
+</body>
+</html>
