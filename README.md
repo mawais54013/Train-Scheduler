@@ -2,7 +2,7 @@
 
 Train Schedule program created with Firebase to store and display time that trains will come to the station. 
 
-[Train Schedule](file:///Users/muhammadawais/Desktop/Train-Scheduler/index.html)
+[Train Schedule](https://mawais54013.github.io/Train-Scheduler/)
 
 [Portfolio](https://mawais54013.github.io/Bootstrap-Portfolio/portfolio.html)
 
